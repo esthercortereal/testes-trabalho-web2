@@ -25,54 +25,64 @@
 
 // //-------------------------EXEMPLO DO CHAT GPT----------------------------
 
-const musicas = ["Fearless", "Fifteen", "Love Story", "Hey Stephen", "White Horse"]
+ musicas = [
+    "fearless", "fifteen", "love story", "hey stephen", "white horse",
+    "welcome to new york", "blank space", "style", "out of the woods", "shake it off",
+    "...ready for it?", "end game", "i did something bad", "delicate", "look what you made me do"
+];
 
-//     album1989: ["Welcome to New York", "Blank Space", "Style", "Out of the Woods", "Shake It Off"],
-//     reputation: ["...Ready For It?", "End Game", "I Did Something Bad", "Delicate", "Look What You Made Me Do"]
-// };
+ inputmusica = document.getElementById("inputmusica");
+ resultado = document.getElementById("resultado");
 
-inputmusica = document.getElementById("inputmusica");
-resultado = document.getElementById("resultado");
+function adicionarMusica(event) {
+    if (event.key === 'Enter') {
 
-function adicionarMusica() {
+        const musicadigitada = inputmusica.value.toLowerCase().trim();
 
-
-
-
-}
-
-addEventListener('keydown',(event) => {
-	if(event.key =='Enter'){  
-
-
-      
-    }
-})
-
-
-
-const palavras = ["maçã", "banana", "laranja", "uva"];
-
-// Seleciona o campo de entrada e o parágrafo de resultado
-const inputPalavra = document.getElementById("inputPalavra");
-const resultado = document.getElementById("resultado");
-
-// Função que verifica se a palavra está no array e exibe na tela
-inputPalavra.addEventListener("keypress", function(event) {
-    if (event.key === "Enter") {
-        const palavraDigitada = inputPalavra.value.toLowerCase();
-
-        // Exibe a palavra apenas se estiver no array
-        if (palavras.includes(palavraDigitada)) {
-            resultado.textContent = palavraDigitada;
+        // Verifica se a música digitada está no array
+        if (musicas.includes(musicadigitada)) {
+            resultado.textContent = musicadigitada;
         } else {
-            resultado.textContent = ""; // Não exibe nada se a palavra não estiver no array
+            resultado.textContent = ""; // Não exibe nada se a música não estiver no array
         }
 
         // Limpa o campo de entrada
-        inputPalavra.value = "";
+        inputmusica.value = "";
     }
-});
+}
+
+// Adiciona o evento apenas ao campo de entrada
+inputmusica.addEventListener('keydown', adicionarMusica);
+
+
+// listItem = document.createElement("li"); // Cria um item de lista
+// listItem.textContent = musicadigitada; // Define o texto do item
+// resultado.appendChild(listItem);
+
+
+
+// const palavras = ["maçã", "banana", "laranja", "uva"];
+
+// // Seleciona o campo de entrada e o parágrafo de resultado
+// const inputPalavra = document.getElementById("inputPalavra");
+// const resultado = document.getElementById("resultado");
+
+// // Função que verifica se a palavra está no array e exibe na tela
+// inputPalavra.addEventListener("keypress", function(event) {
+//     if (event.key === "Enter") {
+//         const palavraDigitada = inputPalavra.value.toLowerCase();
+
+//         // Exibe a palavra apenas se estiver no array
+//         if (palavras.includes(palavraDigitada)) {
+//             resultado.textContent = palavraDigitada;
+//         } else {
+//             resultado.textContent = ""; // Não exibe nada se a palavra não estiver no array
+//         }
+
+//         // Limpa o campo de entrada
+//         inputPalavra.value = "";
+//     }
+// });
 
 
 // const musicasAdicionadas = {
