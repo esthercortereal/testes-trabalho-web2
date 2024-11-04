@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,5 +17,59 @@
 
 
     <script src='testes.js'></script>    
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Músicas da Taylor Swift</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Digite as músicas da Taylor Swift</h1>
+    
+    <input type="text" id="inputMusica" placeholder="Digite o nome da música" oninput="adicionarMusica()">
+
+    <div id="albuns">
+        <h2>Fearless</h2>
+        <table id="fearless" class="album">
+            <thead>
+                <tr>
+                    <th>Músicas</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <h2>1989</h2>
+        <table id="album1989" class="album">
+            <thead>
+                <tr>
+                    <th>Músicas</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <h2>Reputation</h2>
+        <table id="reputation" class="album">
+            <thead>
+                <tr>
+                    <th>Músicas</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <!-- Adicione mais álbuns conforme necessário -->
+    </div>
+
+    <script src="testes.js"></script>
 </body>
 </html>
