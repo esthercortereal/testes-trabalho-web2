@@ -1,0 +1,14 @@
+body{
+    background-color:plum;
+ }
+ #mine{
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 10px;
+ }
+ #n1{
+    background-color: blueviolet;
+    border-radius: 10px;
+    border-color: violet;
+    border-width: 0.5px;
+    text-align: center;
+}
